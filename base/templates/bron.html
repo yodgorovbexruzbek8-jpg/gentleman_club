@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="w-[600px] mx-auto mt-[30px]">
+
+    <h1 class="text-[30px] font-bold mb-[20px]">
+        Sartaroshga bron qilish
+    </h1>
+
+
+    <!-- Barber -->
+
+    <div class="border rounded-[10px] overflow-hidden mb-[20px]">
+
+        <img
+            src="{{ product.rasm.url }}"
+            class="w-full h-[250px] object-cover"
+        >
+
+        <div class="p-[20px]">
+
+            <h2 class="text-[24px] font-bold">
+                {{ product.ism_familiya }}
+            </h2>
+
+            <p class="mt-[8px]">
+                ⭐ {{ product.reyting }}
+            </p>
+
+            <p class="mt-[8px]">
+                {{ product.tajriba }} yil tajriba
+            </p>
+
+            <p class="text-blue-600 text-[20px] font-bold mt-[8px]">
+                {{ product.narx }} so'm
+            </p>
+
+            <p class="text-gray-500 mt-[8px]">
+                {{ product.tavsif }}
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bron -->
+
+    <div class="border rounded-[10px] p-[20px]">
+
+        <h2 class="text-[22px] font-bold mb-[20px]">
+            Bron qilish
+        </h2>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <label class="font-bold">
+                Ismingiz
+            </label>
+
+            <input
+                type="text"
+                name="mijoz_ismi"
+                placeholder="Ismingizni kiriting"
+                class="w-full border rounded-[8px] p-[10px] mt-[5px] mb-[15px]"
+                required
+            >
+
+
+            <label class="font-bold">
+                Sartarosh
+            </label>
+
+            <input
+                type="text"
+                value="{{ product.ism_familiya }}"
+                class="w-full border rounded-[8px] p-[10px] mt-[5px] mb-[15px] bg-gray-100"
+                readonly
+            >
+
+
+            <label class="font-bold">
+                Sana
+            </label>
+
+            <input
+                type="date"
+                name="sana"
+                class="w-full border rounded-[8px] p-[10px] mt-[5px] mb-[15px]"
+                required
+            >
+
+
+            <label class="font-bold">
+                Vaqt
+            </label>
+
+            <input
+                type="time"
+                name="vaqt"
+                class="w-full border rounded-[8px] p-[10px] mt-[5px] mb-[20px]"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="w-full bg-blue-600 text-white p-[10px] rounded-[8px]"
+            >
+                Bron qilish
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

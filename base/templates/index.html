@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="bg-black text-white mb-[-50px]">
+    <div class="min-h-[650px]  flex flex-col items-center justify-center text-center bg-cover  border-b-2 bg-fixed bg-center"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://avatars.mds.yandex.net/i?id=3ea32ca570d8d955d3e38617630cd108adffc9ca-4428480-images-thumbs&n=13);">
+
+        <img src="https://avatars.mds.yandex.net/i?id=9144b1189cd4ae67859a2520ad311ca009343a99-5282880-images-thumbs&n=13"
+            alt="Barber" class="w-[150px] h-[150px] object-cover rounded-full border-4 border-white mb-[25px]">
+
+        <h1 class="text-[60px] font-bold text-white">
+            BARBER SHOP
+        </h1>
+
+        <p class="text-gray-300 text-[20px] mt-[10px]">
+            Zamonaviy va professional sartaroshlik
+        </p>
+
+        <a href="{% url 'barberlar' %}"
+            class="border-2 border-white text-white rounded-[5px] px-[30px] py-[12px] mt-[25px]">
+            Barberlarni ko'rish
+        </a>
+
+    </div>
+
+
+
+    <div class="text-center mt-[50px] text-white py-[70px]">
+
+        <h1 class="text-[45px] font-bold">
+            Yangi Uslub
+        </h1>
+
+        <p class="text-[18px] text-gray-300 mt-[15px]">
+            Har kuni o'zingizga yangi va o'zgacha ko'rinish yarating
+        </p>
+
+        <a href="{% url 'barberlar' %}">
+            <button class="bg-white text-black px-[30px] py-[13px] rounded-[5px] mt-[25px]">
+                O`fisni ko`rish
+            </button>
+        </a>
+
+    </div>
+
+
+
+
+
+
+    <div class="w-[900px] mx-auto mt-[50px]">
+
+        <h2 class="text-[30px] font-bold text-center mb-[30px]">
+            Biz haqimizda
+        </h2>
+
+        <div class="border rounded-[10px] p-[25px]">
+
+            <p class="text-[17px] text-gray-600">
+                Barber House — zamonaviy sartaroshlik xizmatlarini
+                taqdim etuvchi platforma. Bu yerda o'zingizga mos
+                sartaroshni topishingiz va qulay vaqtda bron qilishingiz
+                mumkin.
+            </p>
+
+            <p class="text-[17px] text-gray-600 mt-[15px]">
+                Bizning professional sartaroshlarimiz soch olish,
+                soqol olish va zamonaviy soch turmaklarini bajarishadi.
+            </p>
+
+        </div>
+
+
+        <h2 class="text-[30px] font-bold text-center mt-[50px] mb-[30px]">
+            Bizning xizmatlar
+        </h2>
+
+
+        <div class="flex gap-[20px]">
+
+            <div class="border rounded-[10px] p-[20px] w-[280px]">
+
+                <h3 class="text-[20px] font-bold">
+                    ✂️ Soch olish
+                </h3>
+
+                <p class="text-gray-500 mt-[10px]">
+                    Zamonaviy va klassik soch turmaklari.
+                </p>
+
+            </div>
+
+
+            <div class="border rounded-[10px] p-[20px] w-[280px]">
+
+                <h3 class="text-[20px] font-bold">
+                    🧔 Soqol olish
+                </h3>
+
+                <p class="text-gray-500 mt-[10px]">
+                    Soqol uchun professional xizmatlar.
+                </p>
+
+            </div>
+
+
+            <div class="border rounded-[10px] p-[20px] w-[280px]">
+
+                <h3 class="text-[20px] font-bold">
+                    💈 Styling
+                </h3>
+
+                <p class="text-gray-500 mt-[10px]">
+                    Sizga mos zamonaviy ko'rinish.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="text-center mt-[50px] mb-[50px]">
+
+            <h2 class="text-[28px] font-bold">
+                O'zingizga mos sartaroshni toping!
+            </h2>
+
+            <p class="text-gray-500 mt-[10px]">
+                Hozir sartaroshlarni ko'rib chiqing va bron qiling.
+            </p>
+
+            <a href="{% url 'barberlar' %}">
+                <button class="bg-black text-white px-[25px] py-[12px] rounded-[8px] mt-[20px]">
+                    Boshlash
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uz">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+</head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<body>
+
+    {% include "navigation.html" %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include "footer.html" %}
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body class="bg-black text-white">
+
+    {% for product in products %}
+
+    <div class="w-[300px] border border-gray-300 rounded-[10px] m-[10px] overflow-hidden">
+
+
+        <img class="w-[300px] h-[250px] object-cover" src="{{ product.rasm.url }}" alt="{{ product.ism_familiya }} w">
+
+        <div class="p-[10px]">
+
+            <h2 class="text-[20px] font-bold">
+                {{ product.ism_familiya }}
+            </h2>
+
+            <p class="text-[15px] mt-[5px]">
+                ⭐ {{ product.reyting }}
+            </p>
+
+            <p class="text-[15px]">
+                {{ product.tajriba }} yil tajriba
+            </p>
+
+            <p class="text-[18px] text-blue-600 font-bold mt-[5px]">
+                {{ product.narx }} so'm
+            </p>
+
+            <p class="text-[14px] text-gray-500 mt-[5px]">
+                {{ product.tavsif }}
+            </p>
+
+            <a href="{% url 'bron' product.id %}">
+                <button type="button" class="w-full h-[40px] bg-blue-600 text-white rounded-[8px] mt-[10px]">
+                    Bron qilish
+                </button>
+            </a>
+
+        </div>
+
+
+    </div>
+
+    {% empty %}
+
+    <p class="text-gray-500">
+        Hozircha sartaroshlar mavjud emas.
+    </p>
+
+    {% endfor %}
+
+    {% endblock %}

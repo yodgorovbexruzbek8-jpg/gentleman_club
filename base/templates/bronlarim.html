@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class=" bg-black text-white m-[0] p-[20px] mb-[-50px] ">
+    <div class="w-[700px] mx-auto mt-[30px]">
+
+        <h1 class="text-[30px] font-bold mb-[25px]">
+            Bronlarim
+        </h1>
+
+
+        {% for bron in bronlar %}
+
+        <div class="border rounded-[10px] p-[20px] mb-[15px]">
+
+            <h2 class="text-[22px] font-bold">
+                {{ bron.sartarosh.ism_familiya }}
+            </h2>
+
+            <p class="mt-[10px]">
+                ⭐ {{ bron.sartarosh.reyting }}
+            </p>
+
+            <p class="mt-[8px]">
+                👤 Mijoz: {{ bron.mijoz_ismi }}
+            </p>
+
+            <p class="mt-[8px]">
+                📅 Sana: {{ bron.sana }}
+            </p>
+
+            <p class="mt-[8px]">
+                🕐 Vaqt: {{ bron.vaqt }}
+            </p>
+
+            <p class="text-blue-600 font-bold mt-[8px]">
+                💰 {{ bron.sartarosh.narx }} so'm
+            </p>
+
+        </div>
+
+        {% empty %}
+
+        <div class="border rounded-[10px] p-[20px] text-center">
+
+            <p class="text-gray-500">
+                Hozircha bronlaringiz yo'q.
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+
+{% endblock %}
