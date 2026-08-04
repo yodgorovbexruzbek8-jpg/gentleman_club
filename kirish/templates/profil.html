@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="w-[500px] mx-auto mt-[50px]">
+
+        <div class="bg-white rounded-[15px] p-[30px]">
+
+            <h1 class="text-[30px] font-bold text-center">
+                Mening profilim
+            </h1>
+
+            <div class="mt-[30px]">
+
+                <p class="text-[16px] text-gray-500">
+                    Username
+                </p>
+
+                <p class="text-[20px] font-bold">
+                    {{ user.username }}
+                </p>
+
+            </div>
+
+
+            <div class="mt-[20px]">
+
+                <p class="text-[16px] text-gray-500">
+                    Ism
+                </p>
+
+                <p class="text-[20px] font-bold">
+                    {{ user.first_name }}
+                </p>
+
+            </div>
+
+
+            <div class="mt-[20px]">
+
+                <p class="text-[16px] text-gray-500">
+                    Familiya
+                </p>
+
+                <p class="text-[20px] font-bold">
+                    {{ user.last_name }}
+                </p>
+
+            </div>
+
+
+            <div class="mt-[20px]">
+
+                <p class="text-[16px] text-gray-500">
+                    Email
+                </p>
+
+                <p class="text-[20px] font-bold">
+                    {{ user.email }}
+                </p>
+
+            </div>
+
+
+            
+
+        </div>
+
+    </div>
+
+</body>
+</html>

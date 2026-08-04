@@ -10,6 +10,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     kategoriya = models.ForeignKey(Category, on_delete=models.CASCADE)
+    rasm = models.ImageField(upload_to="barberlar/")
     ism_familiya = models.CharField(max_length=200, blank=True, null=True)
     tajriba = models.PositiveIntegerField()
     reyting = models.FloatField(default=5.0)
